@@ -3,7 +3,7 @@ import axios from 'axios';
 import { FormEvent, useState } from 'react';
 const ApiGet = () => {
     let [nome , SetNom] = useState("")
-    const input = "p-[10px] mt-[15px] border text-white"
+    const input = "p-[10px] mt-[15px] border text-black"
     let [preco, SetPreco ] = useState(0.0)
     let [estoque,  SetEstoque] = useState(0)
     let [min, SetMin] = useState(0)
@@ -41,7 +41,7 @@ const ApiGet = () => {
         }
         return(
             
-        <form onSubmit={submit}>
+        <form onSubmit={submit} className=''>
             <input className={input} type="text" placeholder='Nome' onChange={(e) => {SetNom(e.target.value)}} />
             <br />
             <input className={input} type="number" placeholder='Preço' onChange={(e) => {SetPreco(Number(e.target.value))}} />
@@ -51,7 +51,7 @@ const ApiGet = () => {
             <input className={input} type="number" placeholder='Min' onChange={(e) => {SetMin(Number(e.target.value))}} />
             <br />
             <br />
-            <div className='flex justify-center items-center'>
+            <div className='flex justify-center items-center '>
 
             <button type="submit" className='text-center border p-[20px] w-[150px] cursor-pointer '>manda</button>
             </div>

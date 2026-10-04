@@ -21,7 +21,7 @@ const Tabela = () => {
         buscarProdutos()
       }, [])
     return(
-        <div className="rounded-md m-4 overflow-hidden max-w-[1000px] pl-5">
+        <div className="rounded-md m-4 overflow-hidden w-full min-h-full pl-5">
              <DataTable
             columns={columns}
             data={produtos}

@@ -108,7 +108,7 @@ export const Dialogo = ({ abre, setAbre }: any) => {
   );
 };
 
-export const Dialogo_remover = () => {
+export const Dialogo_remover = ({abreR, setAbreR}: {abreR: boolean; setAbreR: (abre: boolean) => void}) => {
   const [id, setId] = useState(0);
   const api = async (event: FormEvent) => {
     event.preventDefault();
@@ -122,8 +122,8 @@ export const Dialogo_remover = () => {
   };
   return (
     <>
-      <Dialog>
-        <DialogTrigger>remover</DialogTrigger>
+      <Dialog open={abreR} onOpenChange={setAbreR }>
+       
         <DialogContent>
           <DialogHeader>
             <DialogTitle>Excluir</DialogTitle>
@@ -156,7 +156,7 @@ export const Dialogo_remover = () => {
   );
 };
 
-export const Dialogo_C = ({ abreC, setAbreC }: any) => {
+export const Dialogo_C = ({ abreC, setAbreC }: { abreC: boolean; setAbreC: (abre: boolean) => void }) => {
   const [id, setId] = useState(0);
   const [est, setEst] = useState(0);
   const [add, setAdd] = useState(false);
@@ -250,6 +250,59 @@ export const Dialogo_C = ({ abreC, setAbreC }: any) => {
                 Remover
               </button>
             </div>
+          </form>
+          {/* </DialogDescription> */}
+        </DialogHeader>
+      </DialogContent>
+    </Dialog>
+  );
+};
+export const Dialogo_E = ({ abreE, setAbreE }: { abreE: boolean; setAbreE : (abreE: boolean) => void }) => {
+  const [id, setId] = useState(0);
+  
+  const api = async (evento: FormEvent) => {
+    evento.preventDefault();
+    try {
+      const res = await axios.post(`http://localhost:5258/api/produto/status/${id}`)
+     
+      const resposta = res.data;
+      return resposta;
+    } catch (error) {
+      return error;
+    }
+  };
+  return (
+    <Dialog open={abreE} onOpenChange={setAbreE}>
+      
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>Checagem</DialogTitle>
+          {/* <DialogDescription> */}
+          <form
+            action=""
+            className="flex flex-col gap-2 mt-2"
+            onSubmit={api}
+          >
+            <label htmlFor="Preço">Digite o id do produto:</label>
+
+            <input
+              onChange={(event) => {
+                setId(Number(event.target.value));
+              }}
+              type="text"
+              placeholder="Id"
+              className="border rounded p-2 focus:outline-none focus:ring-2 focus:ring-bg-hover"
+            />
+            <br />
+           
+              <button
+                type="submit"
+               
+                className="border w-[50%] p-2 mt-2 cursor-pointer hover:bg-bg-hover duration-200"
+              >
+                Checar
+              </button>
+           
           </form>
           {/* </DialogDescription> */}
         </DialogHeader>

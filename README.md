@@ -1,7 +1,7 @@
 # LOM: Library Of Management
 ## Aplicaçãozinha feita em nextJS para cuidar de grandes estoques
 <center>
-<img width="200" height="80" alt="favico" src="https://github.com/user-attachments/assets/792aa323-9d55-4d6c-8ee3-8e33264bac20" />
+<img width="80" height="200" alt="favico" src="https://github.com/user-attachments/assets/792aa323-9d55-4d6c-8ee3-8e33264bac20" />
   
 </center>
 ---

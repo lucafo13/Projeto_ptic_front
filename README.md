@@ -18,8 +18,10 @@ mais do Back aqui [Backend do app](https://www.github.com/lucafo13/ptic_back)
 
 
 # screenshots
-
-<img width="1896" height="1047" alt="image" src="https://github.com/user-attachments/assets/f6aa683e-5903-4294-bd44-b408c4bf38c0" />
+<center>
+<img width="200" height="80" alt="image" src="https://github.com/user-attachments/assets/f6aa683e-5903-4294-bd44-b408c4bf38c0" />
+  
+</center>
 
 <!-- This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 

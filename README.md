@@ -40,7 +40,7 @@ A LOM é feita apartir de uma stack meio duvidosa que contém NextJS e Tauri jun
 
 <br>
 
-Mesmo assim, o programa ultiliza os dois em conjunto, criando uma aplicação desktop e ao mesmo tempo um site web, potencializando a programação e fazeno duas coisas ao mesmo tempo.
+Mesmo assim, o programa ultiliza os dois em conjunto, criando uma aplicação desktop e ao mesmo tempo um site web, potencializando a programação e fazeno duas coisas ao mesmo tempo
 
 ## Arquitetura
 
@@ -56,3 +56,83 @@ ASP.NET Core
       │ Entity Framework Core
       ▼
     MySQL
+```
+
+A versão desktop entra na brincadeira assim:
+
+```text
+Next.js
+   │
+   ▼
+Tauri
+   │
+   ▼
+Desktop
+   │
+   └──────► API ASP.NET Core
+```
+
+# Backend
+
+A LOM é alimentada com um Backend feito em C#, usando ASP.NET e MySQL, nele, o banco de dados possui uma tabela produto contendo todas as propriedades (nome, id e tals), e é gerenciado pelo controller da aplicação, ProductController.cs. <br>
+
+mais do Back aqui [Backend do app](https://www.github.com/lucafo13/ptic_back)
+
+## O que o backend faz
+
+* Cadastro de produtos
+* Listagem de produtos
+* Busca de produtos
+* Remoção de produtos
+* Controle de estoque
+* Atualização de estoque
+* Classificação de status dos produtos
+* Consulta de produtos por status
+
+# Frontend
+
+O frontend é construído com Next.js, React e TypeScript, utilizando Tailwind CSS para a interface.
+
+Algumas partes da aplicação:
+
+* Dashboard
+* Gerenciamento de produtos
+* Tabela de produtos
+* Controle de estoque
+* Indicadores de estoque
+* Gráficos
+* Comunicação com a API
+* Interface para desktop através do Tauri
+
+# screenshots
+
+<img width="1896" height="1047" alt="image" src="https://github.com/user-attachments/assets/f6aa683e-5903-4294-bd44-b408c4bf38c0" />
+
+# Como rodar
+
+## Frontend
+
+```bash
+npm install
+npm run dev
+```
+
+Para abrir a versão desktop:
+
+```bash
+npm run app
+```
+
+## Backend
+
+O backend precisa estar rodando separadamente e conectado ao banco MySQL.
+
+Mais informações e código do backend:
+
+[Backend do app](https://www.github.com/lucafo13/ptic_back)
+
+# Status
+
+Em desenvolvimento.
+
+# Ó o fortin

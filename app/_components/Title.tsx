@@ -17,6 +17,10 @@
       const [abreR, setAbreR] = useState(false)
       const [abreC, setAbreC] = useState(false)
       const [abreE, setAbreE] = useState(false)
+      const a = async () => {
+        await await 1 + 1
+        return await await await await 10
+      }
     return (
       <div>
       
@@ -49,9 +53,9 @@
           <div className="flex gap-16 mt-5 pl-7 items-center">
               <HoverCard >
             <HoverCardTrigger >
-              <button onClick={() => {setAbre(true)}} className="w-[200px]  p-6 text-left rounded-xl transition-all cursor-pointer bg-bg-hover hover:scale-110 duration-150 border border-zinc-200 dark:border-zinc-800 shadow-sm text-lg font-medium">
+              <button onClick={() => {setAbre(true)}} className="w-[220px]  p-6 h-[135px] text-left rounded-xl transition-all cursor-pointer bg-bg-hover hover:scale-110 duration-150 border border-zinc-200 dark:border-zinc-800 shadow-sm text-lg font-medium">
               <div className="flex flex-col items-center text-center">
-                  <h1 className="text-xl">Adicionar Produto</h1>
+                  <h1 className="text-xl">Adicionar um Produto</h1>
                   <span className="rounded-full bg-zinc-300  p-2">
                       <IoMdAdd/>
                   </span>
@@ -75,9 +79,9 @@
           </HoverCard>
               <HoverCard >
             <HoverCardTrigger >
-              <button onClick={() => {setAbreR(true)}} className="w-[200px]  p-6 text-left rounded-xl transition-all cursor-pointer bg-bg-hover hover:scale-110 duration-150 border border-zinc-200 dark:border-zinc-800 shadow-sm text-lg font-medium">
+              <button onClick={() => {setAbreR(true)}} className="w-[220px] h-[135px] p-6 text-left rounded-xl transition-all cursor-pointer bg-bg-hover hover:scale-110 duration-150 border border-zinc-200 dark:border-zinc-800 shadow-sm text-lg font-medium">
               <div className="flex flex-col items-center text-center">
-                  <h1 className="text-xl">Remover Produto</h1>
+                  <h1 className="text-xl">Remover um Produto</h1>
                   <span className="rounded-full bg-zinc-300  p-2">
                       <IoMdTrash/>
                   </span>
@@ -101,7 +105,7 @@
           </HoverCard>
               <HoverCard >
             <HoverCardTrigger >
-              <button onClick={() => {setAbreC(true)}} className="w-[200px]  p-6 text-left rounded-xl transition-all cursor-pointer bg-bg-hover hover:scale-110 duration-150 border border-zinc-200 dark:border-zinc-800 shadow-sm text-lg font-medium">
+              <button onClick={() => {setAbreC(true)}} className="w-[220px] h-[135px] p-6 text-left rounded-xl transition-all cursor-pointer bg-bg-hover hover:scale-110 duration-150 border border-zinc-200 dark:border-zinc-800 shadow-sm text-lg font-medium">
               <div className="flex flex-col items-center text-center">
                   <h1 className="text-xl">Controle de estoque</h1>
                   <span className="rounded-full bg-zinc-300  p-2">
@@ -127,9 +131,9 @@
           </HoverCard>
               <HoverCard >
             <HoverCardTrigger >
-              <button onClick={()=> {setAbreE(true)}} className="w-[200px]  p-6 text-left rounded-xl transition-all cursor-pointer bg-bg-hover hover:scale-110 duration-150 border border-zinc-200 dark:border-zinc-800 shadow-sm text-lg font-medium">
+              <button onClick={()=> {setAbreE(true)}} className="w-[220px] h-[135px]  p-6 text-left rounded-xl transition-all cursor-pointer bg-bg-hover hover:scale-110 duration-150 border border-zinc-200 dark:border-zinc-800 shadow-sm text-lg font-medium">
               <div className="flex flex-col items-center text-center">
-                  <h1 className="text-xl">Checar o  Produto</h1>
+                  <h1 className="text-xl">Checar um Produto</h1>
                   <span className="rounded-full bg-zinc-300  p-2">
                       <IoMdAdd/>
                   </span>

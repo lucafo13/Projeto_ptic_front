@@ -1,4 +1,22 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LOM: Library Of Management
+## Aplicaçãozinha feita em nextJS para cuidar de grandes estoques
+---
+
+# Como isso ta funcionando: 
+A LOM é feita apartir de uma stack meio duvidosa que contém NextJS e Tauri juntos, mesmo que ambos sejam frameworks opostos e com finalidades diferentes, sendo usar os dois juntos o mesmo que usar uma pá para escrever um livro.
+<br>
+
+Mesmo assim, o programa ultiliza os dois em conjunto, criando uma aplicação desktop e ao mesmo tempo um site web, potencializando a programação e fazeno duas coisas ao mesmo tempo
+
+# Backend
+
+A LOM é alimentada com um Backend feito em C#, usando ASP.NET e MySQL, nele, o banco de dados possui uma tabela produto contendo todas as propriedades (nome, id e tals), e é gerenciado pelo controller da aplicação, ProductController.cs.
+<br>
+mais do Back aqui [Backend do app](https://www.github.com/lucafo13/ptic_back)
+
+
+
+<!-- This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
@@ -33,4 +51,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details. -->

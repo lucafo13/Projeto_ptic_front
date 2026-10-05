@@ -23,7 +23,14 @@ const se = (con : any ,act : any) => {
 }
 
 const TulhaoAcertou = 1 == 1
-
+const para = (i: number, men: number, act: any) => {
+  for(i; i < men; i++){
+    act()
+  }
+  
+}
+const print = (a: any) => console.log(a)
+para(0, 10, () => {print("oie")})
 const checkthesnails = () => console.log("Hello world")
 
 

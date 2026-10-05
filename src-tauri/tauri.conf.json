@@ -12,7 +12,7 @@
   "app": {
     "windows": [
       {
-        "title": "Gerenciador de estoque",
+        "title": "Library of Management",
         "width": 800,
         "height": 600,
         "resizable": true,

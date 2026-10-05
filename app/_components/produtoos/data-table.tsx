@@ -3,9 +3,12 @@
 import {
     flexRender,
     getCoreRowModel,
+    getPaginationRowModel,
     useReactTable,
 } from "@tanstack/react-table"
 import type { ColumnDef } from "@tanstack/react-table"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 import {
     Table,
@@ -30,7 +33,18 @@ export function DataTable<TData, TValue>({
         data,
         columns,
         getCoreRowModel: getCoreRowModel(),
+        getPaginationRowModel: getPaginationRowModel(),
+        initialState: {
+            pagination: {
+                pageIndex: 0,
+                pageSize: 7,
+            },
+        },
     })
+    const { pageIndex, pageSize } = table.getState().pagination
+    const rowCount = table.getRowCount()
+    const firstRow = rowCount === 0 ? 0 : pageIndex * pageSize + 1
+    const lastRow = Math.min((pageIndex + 1) * pageSize, rowCount)
 
     return (
         <div className="rounded-md border overflow-hidden">
@@ -96,6 +110,31 @@ export function DataTable<TData, TValue>({
 
             </Table>
 
+            <div className="flex items-center justify-between border-t border-border-light px-3 py-2">
+                <p className="text-sm text-text-secondary">
+                    {firstRow}–{lastRow} de {rowCount} produtos
+                </p>
+                <div className="flex items-center gap-1">
+                    <Button
+                        variant="outline"
+                        size="icon-sm"
+                        aria-label="Página anterior"
+                        onClick={() => table.previousPage()}
+                        disabled={!table.getCanPreviousPage()}
+                    >
+                        <ChevronLeft />
+                    </Button>
+                    <Button
+                        variant="outline"
+                        size="icon-sm"
+                        aria-label="Próxima página"
+                        onClick={() => table.nextPage()}
+                        disabled={!table.getCanNextPage()}
+                    >
+                        <ChevronRight />
+                    </Button>
+                </div>
+            </div>
         </div>
     )
 }

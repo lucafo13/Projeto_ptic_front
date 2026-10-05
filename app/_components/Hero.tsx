@@ -1,5 +1,5 @@
 import { ChartBarDemoLegend} from "./chart";
-import Title from "./Title";
+import {Title} from "./Title";
 const Hero = () => {
     return(
         <>

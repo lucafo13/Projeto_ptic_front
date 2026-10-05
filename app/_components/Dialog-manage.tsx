@@ -42,6 +42,9 @@ export const Dialogo = ({ abre, setAbre }: any) => {
       return resposta;
     } catch (error) {
       throw new Error("erro");
+    } finally{
+      setAbre(false)
+      location.reload()
     }
   };
   return (
@@ -118,6 +121,9 @@ export const Dialogo_remover = ({abreR, setAbreR}: {abreR: boolean; setAbreR: (a
       return resposta;
     } catch (error) {
       return error;
+    } finally {
+      setAbreR(false)
+      location.reload()
     }
   };
   return (
@@ -177,6 +183,10 @@ export const Dialogo_C = ({ abreC, setAbreC }: { abreC: boolean; setAbreC: (abre
     } catch (error) {
       return error;
     }
+    finally{
+      setAbreC(false)
+      location.reload()
+    }
   };
   const apiR = async (evento: FormEvent) => {
     evento.preventDefault();
@@ -194,6 +204,9 @@ export const Dialogo_C = ({ abreC, setAbreC }: { abreC: boolean; setAbreC: (abre
       return resposta;
     } catch (error) {
       return error;
+    } finally{
+      setAbreC(false)
+      location.reload()
     }
   };
   return (
@@ -269,6 +282,9 @@ export const Dialogo_E = ({ abreE, setAbreE }: { abreE: boolean; setAbreE : (abr
       return resposta;
     } catch (error) {
       return error;
+    }finally {
+      setAbreE(false)
+      location.reload()
     }
   };
   return (

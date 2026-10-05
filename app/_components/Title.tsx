@@ -12,7 +12,7 @@
   import { IoMdAdd, IoMdTrash } from "react-icons/io";
   import Tabela from "./Tabela";
 
-  const Title = () => {
+export  const Title = () => {
       const [abre, setAbre] = useState(false)
       const [abreR, setAbreR] = useState(false)
       const [abreC, setAbreC] = useState(false)
@@ -161,4 +161,18 @@
       </div>
     );
   };
-  export default Title;
+  export const TituloPR = () => {
+    return (
+      <header className="mb-6 border-b border-border-light px-8 py-7">
+     
+        <h1 className="text-3xl font-bold leading-tight text-text-primary sm:text-4xl">
+          Produtos em estoque
+        </h1>
+        <p className="mt-2 text-sm text-text-secondary">
+          Consulte e acompanhe os produtos disponíveis.
+        </p>
+      </header>
+    )
+  }
+
+  

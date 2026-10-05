@@ -1,5 +1,6 @@
 # LOM: Library Of Management
 ## Aplicaçãozinha feita em nextJS para cuidar de grandes estoques
+<img width="437" height="571" alt="favico" src="https://github.com/user-attachments/assets/792aa323-9d55-4d6c-8ee3-8e33264bac20" />
 ---
 
 # Como isso ta funcionando: 
@@ -12,9 +13,13 @@ Mesmo assim, o programa ultiliza os dois em conjunto, criando uma aplicação de
 
 A LOM é alimentada com um Backend feito em C#, usando ASP.NET e MySQL, nele, o banco de dados possui uma tabela produto contendo todas as propriedades (nome, id e tals), e é gerenciado pelo controller da aplicação, ProductController.cs.
 <br>
+
 mais do Back aqui [Backend do app](https://www.github.com/lucafo13/ptic_back)
 
 
+# screenshots
+
+<img width="1896" height="1047" alt="image" src="https://github.com/user-attachments/assets/f6aa683e-5903-4294-bd44-b408c4bf38c0" />
 
 <!-- This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 

@@ -76,7 +76,7 @@ Desktop
 
 A LOM é alimentada com um Backend feito em C#, usando ASP.NET e MySQL, nele, o banco de dados possui uma tabela produto contendo todas as propriedades (nome, id e tals), e é gerenciado pelo controller da aplicação, ProductController.cs. <br>
 
-mais do Back aqui [Backend do app](https://www.github.com/lucafo13/ptic_back)
+mais do Back aqui [Backend do app](https://www.github.com/lucafo13/Projeto_ptic_back)
 
 ## O que o backend faz
 

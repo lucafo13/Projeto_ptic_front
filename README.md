@@ -1,11 +1,6 @@
-# LOM: Library Of Management
-## Aplicaçãozinha feita em nextJS para cuidar de grandes estoques
+# Projeto de PTIC
 
-<div align="center">
-
-![LOM](https://github.com/user-attachments/assets/792aa323-9d55-4d6c-8ee3-8e33264bac20)
-
-</div>
+Sistema de gerenciamento e monitoramento de estoque, desenvolvido com tecnologias web e desktop.
 
 ---
 
@@ -34,90 +29,112 @@
 
 ---
 
-# Como isso ta funcionando:
+# Como funciona?
 
-A LOM é feita apartir de uma stack meio duvidosa que contém NextJS e Tauri juntos, mesmo que ambos sejam frameworks opostos e com finalidades diferentes, sendo usar os dois juntos o mesmo que usar uma pá para escrever um livro.
+O projeto utiliza uma combinação de tecnologias para oferecer uma aplicação que funciona tanto em ambiente web quanto desktop.
 
-<br>
+O frontend é desenvolvido com Next.js, React e TypeScript, enquanto o Tauri permite utilizar a mesma aplicação como um programa desktop. Dessa maneira, é possível aproveitar uma única base de interface para disponibilizar o sistema em diferentes ambientes.
 
-Mesmo assim, o programa ultiliza os dois em conjunto, criando uma aplicação desktop e ao mesmo tempo um site web, potencializando a programação e fazeno duas coisas ao mesmo tempo
+Embora Next.js e Tauri tenham finalidades distintas, sua integração permite combinar os recursos de uma aplicação web com as vantagens de um programa desktop.
 
 ## Arquitetura
 
-A estrutura ficou basicamente assim:
+A comunicação entre as principais tecnologias acontece da seguinte maneira:
 
 ```text
 Next.js + React
-      │
-      │ Axios
-      ▼
-ASP.NET Core
-      │
-      │ Entity Framework Core
-      ▼
-    MySQL
+      |
+      | Axios
+      v
+ ASP.NET Core
+      |
+      | Entity Framework Core
+      v
+     MySQL
 ```
 
-A versão desktop entra na brincadeira assim:
+A versão desktop utiliza o Tauri como camada responsável por executar a aplicação em ambiente nativo:
 
 ```text
-Next.js
-   │
-   ▼
-Tauri
-   │
-   ▼
-Desktop
-   │
-   └──────► API ASP.NET Core
+    Next.js
+       |
+       v
+     Tauri
+       |
+       v
+    Desktop
+       |
+       v
+  API ASP.NET Core
 ```
+
+---
 
 # Backend
 
-A LOM é alimentada com um Backend feito em C#, usando ASP.NET e MySQL, nele, o banco de dados possui uma tabela produto contendo todas as propriedades (nome, id e tals), e é gerenciado pelo controller da aplicação, ProductController.cs. <br>
+O backend foi desenvolvido em C#, utilizando ASP.NET Core e MySQL para o gerenciamento e armazenamento dos dados.
 
-mais do Back aqui [Backend do app](https://www.github.com/lucafo13/Projeto_ptic_back)
+O banco de dados possui uma tabela destinada ao armazenamento dos produtos e suas respectivas propriedades, como identificador, nome, preço e informações de estoque.
 
-## O que o backend faz
+A comunicação e o gerenciamento das operações são realizados por meio dos controllers da aplicação, com auxílio do Entity Framework Core para interação com o banco de dados.
 
-* Cadastro de produtos
-* Listagem de produtos
-* Busca de produtos
-* Remoção de produtos
-* Controle de estoque
-* Atualização de estoque
-* Classificação de status dos produtos
-* Consulta de produtos por status
+**Repositório:** [Backend do projeto](https://github.com/lucafo13/Projeto_ptic_back)
+
+## Funcionalidades do backend
+
+- Cadastro de produtos;
+- Listagem de produtos;
+- Busca de produtos;
+- Remoção de produtos;
+- Controle de estoque;
+- Atualização de estoque;
+- Classificação automática do status dos produtos;
+- Consulta de produtos por status.
+
+---
 
 # Frontend
 
-O frontend é construído com Next.js, React e TypeScript, utilizando Tailwind CSS para a interface.
+O frontend foi desenvolvido utilizando Next.js, React e TypeScript, com Tailwind CSS para a estilização e construção da interface.
 
-Algumas partes da aplicação:
+A comunicação com o backend é realizada por meio de requisições HTTP utilizando Axios. Para a apresentação de informações estatísticas, são utilizados gráficos e indicadores construídos com Chart.js.
 
-* Dashboard
-* Gerenciamento de produtos
-* Tabela de produtos
-* Controle de estoque
-* Indicadores de estoque
-* Gráficos
-* Comunicação com a API
-* Interface para desktop através do Tauri
+## Funcionalidades do frontend
 
-# screenshots
+- Dashboard;
+- Gerenciamento de produtos;
+- Tabela de produtos;
+- Controle de estoque;
+- Indicadores de estoque;
+- Gráficos e visualização de dados;
+- Comunicação com a API;
+- Interface desktop através do Tauri.
 
-<img width="1896" height="1047" alt="image" src="https://github.com/user-attachments/assets/f6aa683e-5903-4294-bd44-b408c4bf38c0" />
+---
 
-# Como rodar
+# Screenshots
+
+![Screenshot da aplicação](https://github.com/user-attachments/assets/f6aa683e-5903-4294-bd44-b408c4bf38c0)
+
+---
+
+# Como executar
 
 ## Frontend
 
+Instale as dependências:
+
 ```bash
 npm install
+```
+
+Execute a versão web:
+
+```bash
 npm run dev
 ```
 
-Para abrir a versão desktop:
+Para iniciar a versão desktop:
 
 ```bash
 npm run app
@@ -125,14 +142,18 @@ npm run app
 
 ## Backend
 
-O backend precisa estar rodando separadamente e conectado ao banco MySQL.
+O backend deve ser executado separadamente e precisa estar conectado a uma instância do MySQL devidamente configurada.
 
-Mais informações e código do backend:
+Mais informações e código-fonte:
 
-[Backend do app](https://www.github.com/lucafo13/ptic_back)
+[Repositório do backend](https://github.com/lucafo13/Projeto_ptic_back)
 
-# Status
+---
 
-Em desenvolvimento.
+# Status do projeto
 
-# Ó o fortin
+**Em desenvolvimento.**
+
+---
+
+*Ó o fortin fih*
